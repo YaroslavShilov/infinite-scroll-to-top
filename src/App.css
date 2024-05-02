@@ -1,19 +1,14 @@
-/*BEGIN
-Important styles, without this css, the scroll won't work
-
+/* Important styles, without this CSS, the scroll won't work
+  you should have:
+  max-height / height and overflow
+  it'll let the scroll appear
 */
 .messages {
-  /*
-  you should have max-height / height
-  and overflow
-  it'll let the scroll appear
-  */
   height: 500px;
   overflow-y: auto;
 }
-/*END*/
 
-/*Other styles, will work without them*/
+/* Other styles. They are just for beauty.*/
 * {
   box-sizing: border-box;
 }
