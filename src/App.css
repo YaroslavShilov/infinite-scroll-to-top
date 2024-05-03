@@ -74,11 +74,9 @@ body {
 .messages {
   display: flex;
   flex-direction: column;
-  align-items: end;
   gap: 8px;
-  text-align: right;
-  margin-right: -15px;
-  padding-right: 15px;
+  margin: 0 -15px;
+  padding: 0 15px;
 
   overscroll-behavior-y: contain;
 }
@@ -94,11 +92,10 @@ body {
   border-radius: 10px 10px 0 10px;
   background: #ed5c52;
 
-  &:after,
-  &:before {
+  &:before,
+  &:after {
     content: "";
     position: absolute;
-    right: -10px;
     bottom: 0;
 
     width: 10px;
@@ -114,5 +111,37 @@ body {
     z-index: 2;
     background-color: #f4f4f4;
     border-radius: 0 0 0 100%;
+  }
+}
+
+.message:nth-child(even) {
+  margin-left: auto;
+
+  &:before,
+  &:after {
+    right: -10px;
+  }
+}
+
+.message:nth-child(odd) {
+  margin-right: auto;
+
+  text-align: left;
+  color: black;
+
+  background-color: white;
+  border-radius: 10px 10px 10px 0;
+
+  &:before,
+  &:after {
+    left: -10px;
+  }
+
+  &:before {
+    background-color: white;
+  }
+
+  &:after {
+    border-radius: 0 0 100% 0;
   }
 }
