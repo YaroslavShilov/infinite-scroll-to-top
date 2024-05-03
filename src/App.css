@@ -74,16 +74,41 @@ body {
   flex-direction: column;
   align-items: end;
   gap: 8px;
+  text-align: right;
+  margin-right: -15px;
+  padding-right: 15px;
 }
 
 .message {
-  min-height: 33px;
+  position: relative;
   padding: 8px 10px;
 
   font-size: 14px;
   text-align: right;
   color: white;
 
-  border-radius: 10px;
+  border-radius: 10px 10px 0 10px;
   background: #ed5c52;
+
+  &:after,
+  &:before {
+    content: "";
+    position: absolute;
+    right: -10px;
+    bottom: 0;
+
+    width: 10px;
+    height: 10px;
+  }
+
+  &:before {
+    z-index: 1;
+    background: #ed5c52;
+  }
+
+  &:after {
+    z-index: 2;
+    background-color: #f4f4f4;
+    border-radius: 0 0 0 100%;
+  }
 }
