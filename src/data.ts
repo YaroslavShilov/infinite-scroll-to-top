@@ -17,7 +17,7 @@ export const fetchMessages = (page: number): Data => {
   while (idStart <= idEnd) {
     messages.unshift({
       id: idStart,
-      text: `Message  #${idStart}, page #${page}`,
+      text: `Message #${idStart}, page #${page}`,
     });
     idStart++;
   }

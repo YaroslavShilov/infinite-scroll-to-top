@@ -1,4 +1,5 @@
-/* Important styles, without this CSS, the scroll won't work
+/*
+  Important styles, without this CSS, the scroll won't work
   you should have:
   max-height / height and overflow
   it'll let the scroll appear
@@ -12,6 +13,7 @@
 * {
   box-sizing: border-box;
 }
+
 body {
   margin: 0;
   font-family: "Inter", sans-serif;
@@ -24,7 +26,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 20px;
+  padding: 10px;
 
   background: linear-gradient(45deg, #d5db9a, #f6ada8);
 }
@@ -77,6 +79,8 @@ body {
   text-align: right;
   margin-right: -15px;
   padding-right: 15px;
+
+  overscroll-behavior-y: contain;
 }
 
 .message {
